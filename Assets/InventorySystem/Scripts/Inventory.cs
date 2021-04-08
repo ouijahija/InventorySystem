@@ -159,6 +159,14 @@ namespace Zhdk.Gamelab.InventorySystem
             return false;
         }
 
+        public bool IsInSpecialSlot(InventoryObject inventoryObject)
+        {
+            if (!IsInInventory(inventoryObject))
+                return false;
+
+            return specialInventoryObject == inventoryObject;
+        }
+
         public void CleanupExistingSceneInventoryObjects()
         {
             if (sceneCleanUp)

@@ -22,7 +22,7 @@ namespace Zhdk.Gamelab.InventorySystem
 
             foreach (InventoryObject inventoryObject in inventoryObjects)
             {
-                if ((isSpecialObject && inventory.GetSpecialInventoryObject() == inventoryObject) 
+                if ((isSpecialObject && inventory.IsInSpecialSlot(inventoryObject)) 
                     || (!isSpecialObject && inventory.IsInInventory(inventoryObject)))
                 {
                     oneExists = true;
